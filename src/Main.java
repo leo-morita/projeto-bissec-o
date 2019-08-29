@@ -99,4 +99,6 @@ public class Main {
             indices.add(i);
         }
     }
+
+    public void teste() {}
 }
