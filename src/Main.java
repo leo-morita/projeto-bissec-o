@@ -60,6 +60,8 @@ public class Main {
         }
         
         System.out.println();
+        System.out.println("Teste: " + intervaloA);
+        System.out.println("Teste: " + intervaloB);
         System.out.println(bisseccao(intervaloA.get(1), intervaloB.get(1), -3));
         System.out.println(resultadosDoX);
         

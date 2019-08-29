@@ -1,5 +1,3 @@
-package teste;
-
 import java.util.List;
 import java.util.ArrayList;
 
@@ -11,6 +9,8 @@ public class Teste {
         Bisseccao b = new Bisseccao(resultadosDoX, resultadosCriterioParada);
 
         System.out.println(b.bisseccao(0, 1, -3));
+        System.out.println(b.getResultadosDoX());
+        System.out.println(b.getResultadosCriterioParada());
     }
 
 }
