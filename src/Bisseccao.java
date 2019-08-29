@@ -49,17 +49,19 @@ public class Bisseccao {
         return (x1 + x2) / 2;
     }
 
-    public void tabelaDeSinais() {
+    public void tabelaDeSinais(double n1, double n2, double n3, double n4, double n5, double n6) {
         double resultado;
-        for (int i = -5; i <= 5; i++) {
-            resultado = ((Math.pow(i, 3)) - (9 * i) + 3);
+        for (int x = -100; x <= 100; x++) {
+//            resultado = ((Math.pow(i, 3)) - (9 * i) + 3);
+            resultado = ((n1 * Math.pow(x, 5)) + (n2 * Math.pow(x, 4)) + (n3 * Math.pow(x, 3)) +
+                    (n4 * Math.pow(x, 2)) + (n5 * Math.pow(x, 1)) + n6);
             // System.out.print(resultado + " ");
             this.resultadosFuncao.add(resultado);
-            this.indicesX.add(i);
+            this.indicesX.add(x);
         }
     }
 
-    public List<Integer> identificarIntervalos() {
+    public void identificarIntervalos() {
         for (int i = 0; i < this.resultadosFuncao.size()-1; i++) {
 
             if (this.resultadosFuncao.get(i) < 0 && this.resultadosFuncao.get(i + 1) > 0) {
@@ -73,8 +75,6 @@ public class Bisseccao {
                 this.intervaloB.add(this.indicesX.get(i + 1));
             }
         }
-
-        return intervaloA;
     }
 
     public void imprimirResultado() {
