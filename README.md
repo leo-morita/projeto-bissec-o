@@ -1,1 +1,1 @@
-# projeto-bissec-o
+# Projeto Bissecção
