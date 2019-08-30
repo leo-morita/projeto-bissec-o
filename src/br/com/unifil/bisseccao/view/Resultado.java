@@ -25,12 +25,7 @@ public class Resultado extends javax.swing.JFrame {
 
         jScrollPane2 = new javax.swing.JScrollPane();
         CAIXA = new javax.swing.JTextArea();
-
-<<<<<<< HEAD
         setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
-=======
-        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
->>>>>>> 7f3aee15f2b2629cef549faaffe964e058a933d5
         setTitle("Saida");
         setResizable(false);
 
