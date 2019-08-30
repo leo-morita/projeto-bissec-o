@@ -77,16 +77,6 @@ public class Bisseccao {
         }
     }
 
-    public void imprimirResultado() {
-        for (int i = 0; i < this.resultadosDoX.size(); i++) {
-            int k = i+1;
-            float x = this.resultadosDoX.get(i);
-            double funcao = ((Math.pow(this.resultadosDoX.get(i), 3)) - (9 * this.resultadosDoX.get(i)) + 3);
-            String saida = "K=" + k + ", x=" + x + ", f(x)=" + funcao + ", criterio de parada=" +
-                    Math.abs(this.resultadosCriterioParada.get(i));
-        }
-    }
-
     public List<Float> getResultadosDoX() {
         return this.resultadosDoX;
     }

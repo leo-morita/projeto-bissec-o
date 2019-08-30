@@ -58,6 +58,14 @@ public class Principal {
         System.out.println(intervaloA);
         System.out.println(intervaloB);
 
+        exibirTabelaDeIteracoes(bisseccao, intervaloA, intervaloB, n1, n2, n3, n4, n5, n6, expoente);
+    }
+
+    private static void exibirTabelaDeIteracoes(Bisseccao bisseccao, List<Integer> intervaloA,
+                                                List<Integer> intervaloB, double n1, double n2,
+                                                double n3, double n4, double n5, double n6, int expoente) {
+        List<Float> resultadosDoX;
+        List<Float> resultadosCriterioParada;
         for (int aux = 0; aux < intervaloA.size(); aux++) {
             System.out.format("Intervalo: [%d, %d]%n", intervaloA.get(aux), intervaloB.get(aux));
             System.out.println(bisseccao.bisseccao(intervaloA.get(aux), intervaloB.get(aux), expoente));
