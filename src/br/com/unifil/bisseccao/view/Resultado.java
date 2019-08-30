@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package br.com.unifil.bisseccao.view;
+package view;
 import java.util.*;
 /**
  *
@@ -17,6 +17,7 @@ public class Resultado extends javax.swing.JFrame {
      */
     public Resultado() {
         initComponents();
+        this.setLocationRelativeTo(null);
     }
     
     public void setResultado(String Resposta){
