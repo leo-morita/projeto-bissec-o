@@ -3,9 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package view;
+package br.com.unifil.bisseccao.view;
 
-
+import br.com.unifil.bisseccao.modelo.Bisseccao;
 
 
 /**
@@ -300,7 +300,7 @@ public class tela extends javax.swing.JFrame {
             java.util.logging.Logger.getLogger(tela.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
-        Resultado r = new Resultado();
+        // Resultado r = new Resultado();
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {

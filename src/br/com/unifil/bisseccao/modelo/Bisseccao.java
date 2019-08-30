@@ -1,3 +1,5 @@
+package br.com.unifil.bisseccao.modelo;
+
 import java.util.List;
 import java.util.ArrayList;
 
@@ -12,7 +14,7 @@ public class Bisseccao {
     public float bisseccao(float primeiroIntervalo, float segundoIntervalo, int expoente) {
         float epsilon = (float) Math.pow(10, expoente);
         boolean proximo = false;
-        float in1, in2;
+        float in1;
         float rr = 0;
         int k = 0;
 
@@ -40,7 +42,6 @@ public class Bisseccao {
 
             k++;
             this.resultadosDoX.add(rr);
-            // System.out.println("K=" + k + ", x=" + rr);
         }
         return rr;
     }
@@ -52,10 +53,8 @@ public class Bisseccao {
     public void tabelaDeSinais(double n1, double n2, double n3, double n4, double n5, double n6) {
         double resultado;
         for (int x = -100; x <= 100; x++) {
-//            resultado = ((Math.pow(i, 3)) - (9 * i) + 3);
             resultado = ((n1 * Math.pow(x, 5)) + (n2 * Math.pow(x, 4)) + (n3 * Math.pow(x, 3)) +
                     (n4 * Math.pow(x, 2)) + (n5 * Math.pow(x, 1)) + n6);
-            // System.out.print(resultado + " ");
             this.resultadosFuncao.add(resultado);
             this.indicesX.add(x);
         }
@@ -65,12 +64,9 @@ public class Bisseccao {
         for (int i = 0; i < this.resultadosFuncao.size()-1; i++) {
 
             if (this.resultadosFuncao.get(i) < 0 && this.resultadosFuncao.get(i + 1) > 0) {
-                // System.out.format("[%f, %f]", resultados.get(i), resultados.get(i + 1));
-                // System.out.format("[%d, %d]", indices.get(i), indices.get(i + 1));
                 this.intervaloA.add(this.indicesX.get(i));
                 this.intervaloB.add(this.indicesX.get(i + 1));
             } else if (this.resultadosFuncao.get(i) > 0 && this.resultadosFuncao.get(i + 1) < 0) {
-                // System.out.format("[%d, %d]", indices.get(i), indices.get(i + 1));
                 this.intervaloA.add(this.indicesX.get(i));
                 this.intervaloB.add(this.indicesX.get(i + 1));
             }
@@ -84,14 +80,16 @@ public class Bisseccao {
         List<Float> resultadosCriterioParada;
         for (int aux = 0; aux < intervaloA.size(); aux++) {
             System.out.format("Intervalo: [%d, %d]%n", intervaloA.get(aux), intervaloB.get(aux));
-            System.out.println(this.bisseccao(intervaloA.get(aux), intervaloB.get(aux), expoente));
+
+
+            System.out.println("Resultado: " +
+                    this.bisseccao(intervaloA.get(aux), intervaloB.get(aux), expoente));
 
             resultadosDoX = this.getResultadosDoX();
             resultadosCriterioParada = this.getResultadosCriterioParada();
             for (int i = 0; i < resultadosDoX.size(); i++) {
                 int k = i + 1;
                 float x = resultadosDoX.get(i);
-//                double fun = ((Math.pow(resultadosDoX.get(i), 3)) - (9 * resultadosDoX.get(i)) + 3);
                 double fun = ((n1 * Math.pow(x, 5)) + (n2 * Math.pow(x, 4)) + (n3 * Math.pow(x, 3)) +
                         (n4 * Math.pow(x, 2)) + (n5 * Math.pow(x, 1)) + n6);
                 String saida = "K=" + k + ", x=" + x + ", f(x)=" + fun + ", criterio de parada=" +

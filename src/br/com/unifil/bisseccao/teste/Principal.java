@@ -1,6 +1,8 @@
+package br.com.unifil.bisseccao.teste;
+
+import br.com.unifil.bisseccao.modelo.Bisseccao;
 
 import java.util.List;
-import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Principal {
@@ -61,7 +63,7 @@ public class Principal {
         bisseccao.exibirTabelaDeIteracoes(intervaloA, intervaloB, n1, n2, n3, n4, n5, n6, expoente);
     }
 
-//    private static void exibirTabelaDeIteracoes(Bisseccao bisseccao, List<Integer> intervaloA,
+//    private static void exibirTabelaDeIteracoes(br.com.unifil.bisseccao.modelo.Bisseccao bisseccao, List<Integer> intervaloA,
 //                                                List<Integer> intervaloB, double n1, double n2,
 //                                                double n3, double n4, double n5, double n6, int expoente) {
 //        List<Float> resultadosDoX;
