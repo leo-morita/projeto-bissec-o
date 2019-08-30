@@ -7,7 +7,7 @@ package br.com.unifil.bisseccao.view;
 
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
-
+import br.com.unifil.bisseccao.modelo.*;
 
 
 
