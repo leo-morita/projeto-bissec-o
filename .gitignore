@@ -4,3 +4,4 @@ out/
 *.class
 projeto-bisseccao.iml
 META-INF/
+src/br/com/unifil/bisseccao/view/tela.java

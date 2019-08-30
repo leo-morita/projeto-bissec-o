@@ -4,6 +4,7 @@
  * and open the template in the editor.
  */
 package br.com.unifil.bisseccao.view;
+import javax.swing.*;
 import java.util.*;
 
 public class Resultado extends javax.swing.JFrame {
@@ -15,6 +16,7 @@ public class Resultado extends javax.swing.JFrame {
     public Resultado() {
         initComponents();
         this.setLocationRelativeTo(null);
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     }
     
     public void setResultado(String Resposta){
@@ -37,7 +39,7 @@ public class Resultado extends javax.swing.JFrame {
         jScrollPane2 = new javax.swing.JScrollPane();
         CAIXA = new javax.swing.JTextArea();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Saida");
         setResizable(false);
 
