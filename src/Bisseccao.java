@@ -77,6 +77,32 @@ public class Bisseccao {
         }
     }
 
+    public void exibirTabelaDeIteracoes(List<Integer> intervaloA,
+                                                List<Integer> intervaloB, double n1, double n2,
+                                                double n3, double n4, double n5, double n6, int expoente) {
+        List<Float> resultadosDoX;
+        List<Float> resultadosCriterioParada;
+        for (int aux = 0; aux < intervaloA.size(); aux++) {
+            System.out.format("Intervalo: [%d, %d]%n", intervaloA.get(aux), intervaloB.get(aux));
+            System.out.println(this.bisseccao(intervaloA.get(aux), intervaloB.get(aux), expoente));
+
+            resultadosDoX = this.getResultadosDoX();
+            resultadosCriterioParada = this.getResultadosCriterioParada();
+            for (int i = 0; i < resultadosDoX.size(); i++) {
+                int k = i + 1;
+                float x = resultadosDoX.get(i);
+//                double fun = ((Math.pow(resultadosDoX.get(i), 3)) - (9 * resultadosDoX.get(i)) + 3);
+                double fun = ((n1 * Math.pow(x, 5)) + (n2 * Math.pow(x, 4)) + (n3 * Math.pow(x, 3)) +
+                        (n4 * Math.pow(x, 2)) + (n5 * Math.pow(x, 1)) + n6);
+                String saida = "K=" + k + ", x=" + x + ", f(x)=" + fun + ", criterio de parada=" +
+                        Math.abs(resultadosCriterioParada.get(i));
+                System.out.println(saida);
+            }
+
+            System.out.println("---------------------");
+        }
+    }
+
     public List<Float> getResultadosDoX() {
         return this.resultadosDoX;
     }
