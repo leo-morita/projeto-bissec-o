@@ -6,11 +6,11 @@ public class Teste {
     public static void main(String[] args) {
         List<Float> resultadosDoX = new ArrayList<>();
         List<Float> resultadosCriterioParada = new ArrayList<>();
-        Bisseccao b = new Bisseccao(resultadosDoX, resultadosCriterioParada);
+        //Bisseccao b = new Bisseccao(resultadosDoX, resultadosCriterioParada);
 
-        System.out.println(b.bisseccao(0, 1, -3));
-        System.out.println(b.getResultadosDoX());
-        System.out.println(b.getResultadosCriterioParada());
+        //System.out.println(b.bisseccao(0, 1, -3));
+        //System.out.println(b.getResultadosDoX());
+        //System.out.println(b.getResultadosCriterioParada());
     }
 
 }
