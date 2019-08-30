@@ -236,6 +236,7 @@ public class Tela extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // Calcular:
+        bi.limparLista();
         entrada1 = Double.parseDouble(v1.getText());
         entrada2 = Double.parseDouble(v2.getText());
         entrada3 = Double.parseDouble(v3.getText());
@@ -253,17 +254,24 @@ public class Tela extends javax.swing.JFrame {
             }
         });
         ByteArrayOutputStream baos = new ByteArrayOutputStream();
-    PrintStream ps = new PrintStream(baos);
-        // IMPORTANT: Save the old System.out!
-    PrintStream old = System.out;
-    // Tell Java to use your special stream
-    System.setOut(ps);
-    // Print some output: goes to your special stream
-    bi.exibirTabelaDeIteracoes(bi.getIntervaloA(), bi.getIntervaloB(), entrada1, entrada2, entrada3, entrada4, entrada5, entrada6, entradaE);
-    // Put things back
-    System.out.flush();
-    System.setOut(old);
-    r.setResultado(baos.toString());
+        PrintStream ps = new PrintStream(baos);
+            // IMPORTANT: Save the old System.out!
+        PrintStream old = System.out;
+        // Tell Java to use your special stream
+        System.setOut(ps);
+        // Print some output: goes to your special stream
+        bi.exibirTabelaDeIteracoes(bi.getIntervaloA(), bi.getIntervaloB(), entrada1, entrada2, entrada3, entrada4, entrada5, entrada6, entradaE);
+        // Put things back
+        System.out.flush();
+        System.setOut(old);
+        r.setResultado(baos.toString());
+        v1.setText("");
+        v2.setText("");
+        v3.setText("");
+        v4.setText("");
+        v5.setText("");
+        v6.setText("");
+        ep.setText("");
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void epActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_epActionPerformed

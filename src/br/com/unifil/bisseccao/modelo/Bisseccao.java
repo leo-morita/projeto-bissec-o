@@ -101,6 +101,15 @@ public class Bisseccao {
         }
     }
 
+    public void limparLista() {
+        resultadosDoX.clear();
+        resultadosCriterioParada.clear();
+        resultadosFuncao.clear();
+        indicesX.clear();
+        intervaloA.clear();
+        intervaloB.clear();
+    }
+
     public List<Float> getResultadosDoX() {
         return this.resultadosDoX;
     }
