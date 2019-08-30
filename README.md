@@ -1,6 +1,6 @@
 # Projeto Bissecção
 
-Para executar o software baixar somente [Calculo.jar](https://github.com/leo-morita/projeto-bisseccao/blob/master/Calculo.jar)
+Para executar o software baixar somente [projeto-bisseccao.jar](https://github.com/leo-morita/projeto-bisseccao/blob/master/projeto-bisseccao.jar?raw=true)
 
 O código da bissecção esta em [projeto-bisseccao/src/br/com/unifil/bisseccao/modelo/Bisseccao.java](https://github.com/leo-morita/projeto-bisseccao/blob/master/src/br/com/unifil/bisseccao/modelo/Bisseccao.java)
 
