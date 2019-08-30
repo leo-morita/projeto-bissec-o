@@ -1,7 +1,14 @@
-package br.com.unifil.bisseccao.view;
-import javax.swing.*;
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package view;
 import java.util.*;
-
+/**
+ *
+ * @author victorikeda2011
+ */
 public class Resultado extends javax.swing.JFrame {
     String Resultado = "";
     Scanner teclado = new Scanner(System.in);
@@ -9,7 +16,6 @@ public class Resultado extends javax.swing.JFrame {
     public Resultado() {
         initComponents();
         this.setLocationRelativeTo(null);
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     }
     
     public void setResultado(String Resposta){
@@ -25,7 +31,8 @@ public class Resultado extends javax.swing.JFrame {
 
         jScrollPane2 = new javax.swing.JScrollPane();
         CAIXA = new javax.swing.JTextArea();
-        setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
+
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Saida");
         setResizable(false);
 
@@ -79,4 +86,3 @@ public class Resultado extends javax.swing.JFrame {
     public javax.swing.JTextArea CAIXA;
     private javax.swing.JScrollPane jScrollPane2;
 }
-
