@@ -3,22 +3,17 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package view;
+package br.com.unifil.bisseccao.view;
+
+import br.com.unifil.bisseccao.modelo.Bisseccao;
 
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
 
 
-
-
-/**
- *
- * @author victorikeda2011
- */
-
-public class tela extends javax.swing.JFrame {
+public class Tela extends javax.swing.JFrame {
     /**
-     * Creates new form tela
+     * Creates new form Tela
      */
     double entrada1 = 0;
     double entrada2 = 0;
@@ -29,7 +24,7 @@ public class tela extends javax.swing.JFrame {
     int entradaE = 0;
     Bisseccao bi = new Bisseccao();
     Resultado r = new Resultado();
-    public tela() {
+    public Tela() {
         initComponents();     
         this.setLocationRelativeTo(null);
     }
@@ -294,20 +289,20 @@ public class tela extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(tela.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Tela.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(tela.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Tela.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(tela.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Tela.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(tela.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Tela.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
         Resultado r = new Resultado();
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new tela().setVisible(true);
+                new Tela().setVisible(true);
             }
         });
     }
