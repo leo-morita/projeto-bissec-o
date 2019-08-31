@@ -52,9 +52,9 @@ public class Bisseccao {
 
     public void tabelaDeSinais(double n1, double n2, double n3, double n4, double n5, double n6) {
         double resultado;
-        for (int x = -100; x <= 100; x++) {
-            resultado = ((n1 * Math.pow(x, 5)) + (n2 * Math.pow(x, 4)) + (n3 * Math.pow(x, 3)) +
-                    (n4 * Math.pow(x, 2)) + (n5 * Math.pow(x, 1)) + n6);
+        for (int x = -1000; x <= 1000; x++) {
+            resultado = ((n1 * (Math.pow(x, 5))) + (n2 * (Math.pow(x, 4))) + (n3 * (Math.pow(x, 3))) +
+                    (n4 * (Math.pow(x, 2))) + (n5 * (Math.pow(x, 1))) - n6);
             this.resultadosFuncao.add(resultado);
             this.indicesX.add(x);
         }

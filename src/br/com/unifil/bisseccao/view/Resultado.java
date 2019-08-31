@@ -5,10 +5,7 @@
  */
 package br.com.unifil.bisseccao.view;
 import java.util.*;
-/**
- *
- * @author victorikeda2011
- */
+
 public class Resultado extends javax.swing.JFrame {
     String Resultado = "";
     Scanner teclado = new Scanner(System.in);
